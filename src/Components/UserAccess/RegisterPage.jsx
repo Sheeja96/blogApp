@@ -3,8 +3,7 @@ import { Box, Button, Container, TextField, Typography, Link } from '@mui/materi
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
-import BgImg from './assets/regImg.jpg';
-import './styles/style.css'
+import BgImg from '../assets/regImg.jpg';
 
 function RegisterPage() {
   const navigate = useNavigate();

@@ -3,7 +3,7 @@ import { Box, Button, Container, TextField, Typography } from "@mui/material";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useParams, useNavigate } from "react-router-dom";
-import './styles/style.css'
+import '../styles/style.css'
 import { display } from "@mui/system";
 
 function EditPost({ posts, setPosts }) {

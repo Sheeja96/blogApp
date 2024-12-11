@@ -3,7 +3,7 @@ import { Box, Button, Container, TextField, Typography } from "@mui/material";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { Link, useNavigate } from "react-router-dom";
 import * as Yup from "yup";
-import Img from './assets/b4.jpg'
+import Img from '../assets/b4.jpg'
 function LoginPage() {
   const navigate = useNavigate();
 

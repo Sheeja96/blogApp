@@ -3,7 +3,7 @@ import { Box, Button, Container, TextField, Typography, List, ListItem, ListItem
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
-import './styles/style.css'
+import '../styles/style.css'
 
 function AddPost({ posts, setPosts }) {
   const navigate = useNavigate();

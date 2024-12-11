@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import RegisterPage from './Components/RegisterPage';
-import LoginPage from './Components/LoginPage';
-import AddPost from './Components/AddBlog';
-import EditPost from './Components/EditBlog';
+import RegisterPage from './Components/UserAccess/RegisterPage';
+import LoginPage from './Components/UserAccess/LoginPage';
+import AddPost from './Components/Blogs/AddBlog';
+import EditPost from './Components/Blogs/EditBlog';
 import Navbar from './Components/NavBar';
 import Dashboard from './Components/Dashboard';
 
