@@ -1,81 +1,39 @@
 import React, { useEffect, useState } from "react";
-import { AppBar,Toolbar,Typography,Drawer,List,ListItem,ListItemText,Box,
-CssBaseline,Divider,Card,CardContent,Grid,Paper,} from "@mui/material";
-const drawerWidth = 240;
-function Dashboard() {
-const [users, setUsers] = useState([]);
-const [posts, setPosts] = useState([]);
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Box,
+  CssBaseline,
+  Card,
+  CardContent,
+  Grid,
+  Paper,
+  List,
+  ListItem,
+  ListItemText,
+  Divider,
+  Container,
+} from "@mui/material";
 
-useEffect(() => {
-const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
-const storedPosts = JSON.parse(localStorage.getItem("posts")) || [];
-setUsers(storedUsers);
-setPosts(storedPosts);}, []);
+function Dashboard() {
+  const [users, setUsers] = useState([]);
+  const [posts, setPosts] = useState([]);
+
+  // Retrieve data from localStorage
+  useEffect(() => {
+    const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
+    const storedPosts = JSON.parse(localStorage.getItem("posts")) || [];
+    setUsers(storedUsers);
+    setPosts(storedPosts);
+  }, []);
 
   return (
-<Box sx={{ display: "flex", backgroundColor: "#f5f5f5", minHeight: "100vh" }}>
-<CssBaseline />
-<AppBar position="fixed"
-        sx={{
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
-          ml: { sm: `${drawerWidth}px` },
-          backgroundColor: "#333",
-        }}  >
-        <Toolbar>
-        <Typography variant="h6" noWrap>
-    Blog Dashboard
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <Box
-        component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-        aria-label="menu items"
-      >
-        <Drawer
-          variant="permanent"
-          sx={{
-            display: { xs: "none", sm: "block" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth,
-              backgroundColor: "#212121",
-              color: "white",
-            },
-          }}
-          open
-        >
-          <Toolbar>
-            <Typography variant="h6" sx={{ color: "white" }}>
-              My Blog App
-            </Typography>
-          </Toolbar>
-          <Divider sx={{ borderColor: "#444" }} />
-          <List>
-            <ListItem button>
-              <ListItemText primary="Add Blog" sx={{ color: "white" }} />
-            </ListItem>
-            <ListItem button>
-              <ListItemText primary="Manage Blogs" sx={{ color: "white" }} />
-            </ListItem>
-            <ListItem button>
-              <ListItemText primary="Profile" sx={{ color: "white" }} />
-            </ListItem>
-            <ListItem button>
-              <ListItemText primary="Logout" sx={{ color: "white" }} />
-            </ListItem>
-          </List>
-        </Drawer>
-      </Box>
-      <Box
-        component="main"
-        sx={{
-          flexGrow: 1,
-          p: 3,
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
-        }}
-      >
-        <Toolbar />
+    <Box sx={{ backgroundColor: "#f5f5f5", minHeight: "100vh",  }}>
+    <Container maxWidth='lg'>
+      
+      
+      <Box component="main" sx={{ p: 3 }}>
         {/* Dashboard Stats */}
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={4}>
@@ -126,6 +84,7 @@ setPosts(storedPosts);}, []);
           </Paper>
         </Box>
       </Box>
+    </Container>
     </Box>
   );
 }

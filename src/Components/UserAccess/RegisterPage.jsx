@@ -3,7 +3,6 @@ import { Box, Button, Container, TextField, Typography, Link } from '@mui/materi
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
-import BgImg from '../assets/regImg.jpg';
 
 function RegisterPage() {
   const navigate = useNavigate();
@@ -35,12 +34,10 @@ function RegisterPage() {
   };
 
   return (
-    <Box
+    <Box className="Reg"
       sx={{
         minHeight: '100vh',
-        backgroundImage: `url(${BgImg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -101,7 +98,6 @@ function RegisterPage() {
                 <Button
                   fullWidth
                   variant="contained"
-
                   type="submit"
                   sx={{ mt: 2, backgroundColor: 'black' }}
                 >

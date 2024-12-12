@@ -9,7 +9,7 @@ function Navbar() {
     <>
     {(location.pathname !== '/') && (location.pathname !== '/login') && (
 
-    <AppBar position="static" sx={{ backgroundColor: '#2d3436' }}>
+    <AppBar position="static" sx={{ backgroundColor: '#388849cb' }}>
       <Toolbar>
         <Typography variant="h6" sx={{ flexGrow: 1, textDecoration: 'none', color: 'inherit' }}>
           Blog App

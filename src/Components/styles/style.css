@@ -37,4 +37,12 @@
     min-height: 90vh;
     
   }
+  .Reg{
+    background: linear-gradient(135deg, #388849cb, #5858aaa8); 
+    min-height: 90vh;
+  }
+  .Login{
+    background: linear-gradient(135deg, #388849cb, #5858aaa8); 
+    min-height: 90vh;
+  }
   

@@ -3,7 +3,6 @@ import { Box, Button, Container, TextField, Typography } from "@mui/material";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { Link, useNavigate } from "react-router-dom";
 import * as Yup from "yup";
-import Img from '../assets/b4.jpg'
 function LoginPage() {
   const navigate = useNavigate();
 
@@ -26,19 +25,16 @@ function LoginPage() {
     );
     if (user) {
       localStorage.setItem("isLoggedIn", "true");
-      navigate("/add");
+      navigate("/dashboard");
     } else {
       alert("Invalid username or password");
     }
   };
 
   return (
-    <Box
+    <Box className="Login"
       sx={{
         minHeight: "100vh",
-        backgroundImage: `url(${Img})`, 
-        backgroundSize: "cover",
-        backgroundPosition: "center",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",

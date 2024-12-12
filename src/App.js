@@ -11,19 +11,20 @@ import Dashboard from './Components/Dashboard';
 function App() {
   const [posts, setPosts] = useState([]);
 
+  // Load posts from localStorage on initial render
   useEffect(() => {
     const storedPosts = JSON.parse(localStorage.getItem('posts')) || [];
     setPosts(storedPosts);
   }, []);
-
+ 
   return (
     <Box>
       <Router>
-        <Navbar />
+        <Navbar/>
         <Routes>
-          {/* <Route path="/dashboard" element={<Dashboard/>}/> */}
-          <Route path="/" element={<RegisterPage />} />
+          <Route path="/" element={<RegisterPage/>} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/add" element={<AddPost posts={posts} setPosts={setPosts} />} />
           <Route path="/edit/:id" element={<EditPost posts={posts} setPosts={setPosts} />} />
         </Routes>
