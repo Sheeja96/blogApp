@@ -17,7 +17,7 @@ function Navbar() {
         <Button color="inherit" component={Link} to="/add">
           Add Post
         </Button>
-        <Button color="inherit" component={Link} to="/login">
+        <Button color="inherit" component={Link} to="/">
           Logout
         </Button>
       </Toolbar>
