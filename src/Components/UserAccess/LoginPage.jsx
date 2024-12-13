@@ -32,7 +32,7 @@ function LoginPage() {
   };
 
   return (
-    <Box className="Login"
+    <Box 
       sx={{
         minHeight: "100vh",
         display: "flex",
@@ -54,7 +54,7 @@ function LoginPage() {
           variant="h4"
           align="center"
           gutterBottom
-          sx={{ color: "#ffffff", fontWeight: "bold" }}
+          sx={{ color: "#000000", fontWeight: "bold" }}
         >
           Login
         </Typography>
@@ -75,10 +75,10 @@ function LoginPage() {
                 helperText={<ErrorMessage name="username" />}
                 error={touched.username && Boolean(errors.username)}
                 InputProps={{
-                  style: { color: "#ffffff" },
+                  style: { color: "#000000" },
                 }}
                 InputLabelProps={{
-                  style: { color: "#ffffff" },
+                  style: { color: "#000000" },
                 }}
                  
               />
@@ -93,10 +93,10 @@ function LoginPage() {
                 helperText={<ErrorMessage name="password" />}
                 error={touched.password && Boolean(errors.password)}
                 InputProps={{
-                  style: { color: "#ffffff" },
+                  style: { color: "#000000" },
                 }}
                 InputLabelProps={{
-                  style: { color: "#ffffff" },
+                  style: { color: "#000000" },
                 }}
                 
               />
@@ -104,12 +104,10 @@ function LoginPage() {
                 fullWidth
                 variant="contained"
                 type="submit"
+                color="primary"
                 sx={{
                   mt: 2,
-                  backgroundColor: "#151414",
-                  "&:hover": {
-                    backgroundColor: "#0b57e4",
-                  },
+                 
                   fontWeight: "bold",
                 }}
               >
@@ -120,12 +118,12 @@ function LoginPage() {
         </Formik>
         <Typography
           align="center"
-          sx={{ mt: 2, color: "#ffffff", fontSize: "14px" }}
+          sx={{ mt: 2, color: "#000000", fontSize: "14px" }}
         >
          New User?{" "}
-          < Typography component={Link} to='/'
+          < Typography component={Link} to='/register'
              
-            sx={{ color: "#a8dadc", textDecoration: "none", cursor: "pointer" }}
+            sx={{ color:"blue", textDecoration: "none", cursor: "pointer" }}
           >
             Register
           </Typography>

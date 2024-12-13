@@ -45,4 +45,15 @@
     background: linear-gradient(135deg, #388849cb, #5858aaa8); 
     min-height: 90vh;
   }
+  .EditBlog .updatebtn {
+    background-color: #684141;  
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
   
+  .EditBlog .updatebtn:hover {
+    background-color: #af4f4f;  
+  }

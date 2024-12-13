@@ -29,12 +29,12 @@ function RegisterPage() {
       users.push({ username, password });
       localStorage.setItem('users', JSON.stringify(users));
       alert('Registration successful');
-      navigate('/login');
+      navigate('/');
     }
   };
 
   return (
-    <Box className="Reg"
+    <Box  
       sx={{
         minHeight: '100vh',
         
@@ -54,7 +54,7 @@ function RegisterPage() {
             borderRadius: 2,
           }}
         >
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="h5" gutterBottom sx={{ color: "#000000", fontWeight: "bold" }} >
             Register
           </Typography>
           <Formik
@@ -73,10 +73,10 @@ function RegisterPage() {
                   error={touched.username && Boolean(errors.username)}
                   helperText={<ErrorMessage name="username" />}
                   InputProps={{
-                    style: { color: "#ffffff" },
+                    style: { color: "#000000" },
                   }}
                   InputLabelProps={{
-                    style: { color: "#ffffff" },
+                    style: { color: "#000000" },
                   }}
                 />
                 <Field
@@ -89,17 +89,19 @@ function RegisterPage() {
                   error={touched.password && Boolean(errors.password)}
                   helperText={<ErrorMessage name="password" />}
                   InputProps={{
-                    style: { color: "#ffffff" },
+                    style: { color: "#000000" },
                   }}
                   InputLabelProps={{
-                    style: { color: "#ffffff" },
+                    style: { color: "#000000" },
                   }}
                 />
                 <Button
                   fullWidth
                   variant="contained"
                   type="submit"
-                  sx={{ mt: 2, backgroundColor: 'black' }}
+                  color='primary'
+                  sx={{ mt: 2 }}
+                  
                 >
                   Register
                 </Button>
@@ -107,9 +109,9 @@ function RegisterPage() {
             )}
           </Formik>
           <Box sx={{ marginTop: 2, textAlign: 'center' }}>
-            <Typography variant="body2">
+            <Typography variant="body2"  sx={{ mt: 2, color: "#000000", fontSize: "14px" }}>
               Already registered?{' '}
-              <Link href="/login" sx={{ textDecoration: 'none', color: '#DFBE99' }}>
+              <Link href="/" sx={{ textDecoration: 'none', color: 'blue' }}>
                 Login here
               </Link>
             </Typography>

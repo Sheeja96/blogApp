@@ -12,7 +12,7 @@ function AddPost({ posts, setPosts }) {
     content: Yup.string().required("Content is required"),
   });
 
-
+ 
   const handleAddPost = (values, { resetForm }) => {
     const newPost = { id: posts.length + 1, ...values };
     const updatedPosts = [...posts, newPost];

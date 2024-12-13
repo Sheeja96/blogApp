@@ -4,7 +4,6 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useParams, useNavigate } from "react-router-dom";
 import '../styles/style.css'
-import { display } from "@mui/system";
 
 function EditPost({ posts, setPosts }) {
   const { id } = useParams();
@@ -66,7 +65,7 @@ function EditPost({ posts, setPosts }) {
               error={touched.content && Boolean(errors.content)}
               helperText={<ErrorMessage name="content" />}
             />
-            <Button variant="contained" type="submit" sx={{ mt: 2 }}>
+            <Button variant="contained" type="submit" sx={{ mt: 2 }} className="updatebtn">
               Update Post
             </Button>
           </Form>

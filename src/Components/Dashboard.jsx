@@ -29,7 +29,7 @@ function Dashboard() {
   }, []);
 
   return (
-    <Box sx={{ backgroundColor: "#f5f5f5", minHeight: "100vh",  }}>
+    <Box sx={{ minHeight: "100vh",  }}>
     <Container maxWidth='lg'>
       
       
@@ -37,24 +37,24 @@ function Dashboard() {
         {/* Dashboard Stats */}
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={4}>
-            <Card sx={{ backgroundColor: "#e0f7fa", boxShadow: 3 }}>
+            <Card sx={{  boxShadow: 3 }}>
               <CardContent>
-                <Typography variant="h5" component="div" sx={{ color: "#00796b" }}>
+                <Typography variant="h5" component="div" >
                   Registered Users
                 </Typography>
-                <Typography variant="h4" sx={{ color: "#004d40" }}>
+                <Typography variant="h4"  >
                   {users.length}
                 </Typography>
               </CardContent>
             </Card>
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
-            <Card sx={{ backgroundColor: "#fff3e0", boxShadow: 3 }}>
+            <Card sx={{  boxShadow: 3 }}>
               <CardContent>
-                <Typography variant="h5" component="div" sx={{ color: "#e65100" }}>
+                <Typography variant="h5" component="div" >
                   Total Posts
                 </Typography>
-                <Typography variant="h4" sx={{ color: "#bf360c" }}>
+                <Typography variant="h4" >
                   {posts.length}
                 </Typography>
               </CardContent>
