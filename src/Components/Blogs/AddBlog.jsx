@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Button, Container, TextField, Typography, List, ListItem, ListItemText, IconButton } from "@mui/material";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { useNavigate } from "react-router-dom";
+import {Link, useNavigate } from "react-router-dom";
 import '../styles/style.css'
 
 function AddPost({ posts, setPosts }) {
@@ -19,6 +19,7 @@ function AddPost({ posts, setPosts }) {
     setPosts(updatedPosts);
     localStorage.setItem("posts", JSON.stringify(updatedPosts));
     resetForm();
+    navigate("/dashboard");
   };
 
   const handleDelete = (id) => {
@@ -60,7 +61,7 @@ function AddPost({ posts, setPosts }) {
                 error={touched.content && Boolean(errors.content)}
                 helperText={<ErrorMessage name="content" />}
               />
-              <Button variant="contained" type="submit" sx={{ mt: 2 }}>
+              <Button variant="contained" type="submit"  sx={{ mt: 2 }} >
                 Add Post
               </Button>
             </Form>

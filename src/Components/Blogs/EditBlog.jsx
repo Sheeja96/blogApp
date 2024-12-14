@@ -29,7 +29,7 @@ function EditPost({ posts, setPosts }) {
     );
     setPosts(updatedPosts);
     localStorage.setItem("posts", JSON.stringify(updatedPosts)); // Update localStorage
-    navigate("/add");
+    navigate("/dashboard");
   };
 
   return (

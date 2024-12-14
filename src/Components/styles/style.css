@@ -1,12 +1,12 @@
  
 .add-blog-page {
-    background: linear-gradient(135deg, #f5f5dc, #e6e6fa); 
+    background: linear-gradient(135deg, #ffffff, #ffffff); 
     min-height: 90vh;
     padding-top: 50px;
     
    }
   .blog-form-container {
-    background: #e1dad7;
+    background: #fdfbfa;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -32,11 +32,8 @@
   .blog-form-container button:hover {
     background-color: #af4f4f;  
   }
-  .EditBlog{
-    background: linear-gradient(135deg, #f5f5dc, #e6e6fa); 
-    min-height: 90vh;
-    
-  }
+  
+  
   .Reg{
     background: linear-gradient(135deg, #388849cb, #5858aaa8); 
     min-height: 90vh;
